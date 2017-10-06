@@ -187,5 +187,5 @@ import{GluonElement,html}from'../gluonjs/gluon.js';class OverwebsLoadingSpinner 
         a29 29 0 0 1 14.5 -25.114736709749">
         </path>
       </g>
-    </svg>`}static get observedAttributes(){return['size']}constructor(){super()}connectedCallback(){super.connectedCallback();const a=this.getAttribute('size');null!==a&&(this.size=a)}attributeChangedCallback(a,b,c){'size'===a&&(this.size=c)}set size(a){this._size=a,this.$&&(this.$.svg.style.height=this.$.svg.style.width=`calc(${this.size} / 1920 * var(--overwebs-window-size, 1920px))`)}get size(){return this._size}}customElements.define(OverwebsLoadingSpinner.is,OverwebsLoadingSpinner);
+    </svg>`}static get observedAttributes(){return['size']}connectedCallback(){super.connectedCallback(),null!==this.getAttribute('size')&&this._sizeChanged()}attributeChangedCallback(a){'size'===a&&this._sizeChanged()}_sizeChanged(){this.$&&(this.$.svg.style.height=this.$.svg.style.width=`calc(${this.size} / 1920 * var(--overwebs-window-size, 1920px))`)}set size(a){this.setAttribute('size',a),this._size=a}get size(){const a=this.getAttribute('size');return null===a?'52':a}}customElements.define(OverwebsLoadingSpinner.is,OverwebsLoadingSpinner);
 //# sourceMappingURL=overwebs-loading-spinner.js.map
