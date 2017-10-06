@@ -199,33 +199,33 @@ class OverwebsLoadingSpinner extends GluonElement {
     return ['size'];
   }
 
-  constructor() {
-    super();
-  }
-
   connectedCallback() {
     super.connectedCallback();
-    const size = this.getAttribute('size');
-    if (size !== null) {
-      this.size = size;
+    if (this.getAttribute('size') !== null) {
+      this._sizeChanged();
     }
   }
 
   attributeChangedCallback(attr, oldValue, newValue) {
     if (attr === 'size') {
-      this.size = newValue;
+      this._sizeChanged();
     }
   }
 
-  set size(size) {
-    this._size = size;
+  _sizeChanged() {
     if (this.$) {
       this.$.svg.style.height = this.$.svg.style.width = `calc(${this.size} / 1920 * var(--overwebs-window-size, 1920px))`;
     }
   }
 
+  set size(size) {
+    this.setAttribute('size', size);
+    this._size = size;
+  }
+
   get size() {
-    return this._size;
+    const value = this.getAttribute('size');
+    return value === null ? '52' : value;
   }
 }
 
