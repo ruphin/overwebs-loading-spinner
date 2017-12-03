@@ -2,7 +2,6 @@ import { GluonElement, html } from '../gluonjs/gluon.js';
 
 class OverwebsLoadingSpinner extends GluonElement {
   get template() {
-    // TODO: Migrate to --overwebs-window-size
     return html`
     <style>
       @keyframes overwebs-loading-spinner {
@@ -220,7 +219,6 @@ class OverwebsLoadingSpinner extends GluonElement {
 
   set size(size) {
     this.setAttribute('size', size);
-    this._size = size;
   }
 
   get size() {

@@ -1312,9 +1312,9 @@ glogg@^1.0.0:
   dependencies:
     sparkles "^1.0.0"
 
-gluonjs@^2.0.0-preview.4:
-  version "2.0.0-preview.4"
-  resolved "https://registry.yarnpkg.com/gluonjs/-/gluonjs-2.0.0-preview.4.tgz#38d8587ec6267438cba9573e2ff6bd547d855e45"
+gluonjs@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/gluonjs/-/gluonjs-2.0.2.tgz#8b0228a4c2ca9b2c2dd35adb042bb9aaa4c80495"
   dependencies:
     lit-html "^0.6.0"
 

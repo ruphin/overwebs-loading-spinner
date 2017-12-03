@@ -14,7 +14,7 @@
     "gulp-sourcemaps": "^2.6.1"
   },
   "dependencies": {
-    "gluonjs": "^2.0.0-preview.4"
+    "gluonjs": "^2.0.2"
   },
   "scripts": {
     "build": "gulp",
