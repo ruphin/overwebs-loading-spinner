@@ -1,4 +1,4 @@
-import { GluonElement, html } from '../gluonjs/gluon.js';
+import { GluonElement, html } from 'gluonjs';
 
 class OverwebsLoadingSpinner extends GluonElement {
   get template() {
